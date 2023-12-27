@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Projet 1 Parallax</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="accueil">
+			<div class="fondGolden"></div>
+			<div class="dosHomme"></div>
+			<div class="text"></div>
+			<div class="nuages"></div>
+		</div>
+
+		<div class="contenu">
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Non beatae architecto
+				cupiditate deleniti iusto obcaecati nemo quidem rerum nisi qui.
+			</p>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum accusantium
+				tenetur harum soluta animi dolorum, at molestias necessitatibus. Aliquam, porro
+				quaerat nisi placeat, fugiat quo, commodi rerum doloribus quos aut eius ea
+				repudiandae accusamus saepe suscipit quibusdam laudantium repellendus. Magnam
+				perspiciatis, fugiat delectus, qui velit non odio voluptatum facere quod
+				repudiandae dolorem nam totam ea sit molestias ducimus, praesentium eaque odit.
+				Aperiam voluptates dolorum aliquam! Recusandae suscipit cupiditate quisquam
+				consectetur quos, ratione eaque odio nobis totam ullam beatae praesentium
+				doloribus officiis voluptatem culpa perspiciatis itaque accusamus perferendis
+				officia distinctio similique molestiae, quia labore optio? Officia temporibus
+				molestias natus ab esse.
+			</p>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				gsap.registerPlugin(ScrollTrigger);
+
+				gsap.to(".text", {
+					y: "50%",
+					scrollTrigger: {
+						trigger: ".accueil",
+						start: "top top",
+						end: "bottom bottom",
+						scrub: true,
+					},
+				});
+
+				gsap.to(".nuages", {
+					y: "-50%",
+					scrollTrigger: {
+						trigger: ".accueil",
+						start: "top top",
+						end: "bottom bottom",
+						scrub: true,
+					},
+				});
+			});
+		</script>
+	</body>
+</html>

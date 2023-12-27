@@ -31,11 +31,6 @@ section {
     background: #fff;
     padding: 20px 20px 30px 20px;
 }
-.projet-left .box {
-    grid-column: 3 / span 5;
-    grid-row:  1 / span 3;
-    width: 100%;
-}
 .projet-left .projet-info {
     grid-column: 7 / span 3;
     grid-row: 2 / span 1;

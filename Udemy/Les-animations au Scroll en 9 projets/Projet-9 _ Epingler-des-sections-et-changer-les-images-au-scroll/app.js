@@ -36,4 +36,3 @@ new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
-
